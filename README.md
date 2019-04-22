@@ -1,4 +1,4 @@
-# LFP-Tool
+# Long File Path Tool
 
 Long File Path enabling tool will allow for quickly and easily enabling the
 Windows 10 Long File Path option. This tool will update the registry key
