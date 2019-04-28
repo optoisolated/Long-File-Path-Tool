@@ -8,8 +8,8 @@ Public Class frmMain
         Else
             setLabelState(False)
         End If
+        Me.Text = My.Application.Info.AssemblyName
     End Sub
-
 
     Function CheckLFFState() As Boolean
         Dim retVal As Boolean
@@ -45,7 +45,7 @@ Public Class frmMain
 
     Private Sub btnFix_Click(sender As Object, e As EventArgs) Handles btnFix.Click
         Dim result As Boolean = SetLFF(True)
-        If result Then MsgBox("Changed successfully.", MsgBoxStyle.Information, "LFF Fixer") Else MsgBox("Change Failed", MsgBoxStyle.Critical, Me.Text)
+        If result Then MsgBox("Changed successfully.", MsgBoxStyle.Information, My.Application.Info.AssemblyName) Else MsgBox("Change Failed", MsgBoxStyle.Critical, Me.Text)
         setLabelState(CheckLFFState)
     End Sub
 
@@ -65,7 +65,7 @@ Public Class frmMain
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As Boolean = SetLFF(False)
-        If result Then MsgBox("Changed successfully.", MsgBoxStyle.Information, Me.Text) Else MsgBox("Change Failed", MsgBoxStyle.Critical, Me.Text)
+        If result Then MsgBox("Changed successfully.", MsgBoxStyle.Information, My.Application.Info.AssemblyName) Else MsgBox("Change Failed", MsgBoxStyle.Critical, My.Application.Info.AssemblyName)
         setLabelState(CheckLFFState)
     End Sub
 End Class
